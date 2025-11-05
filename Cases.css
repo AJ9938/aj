@@ -1,0 +1,154 @@
+/* === CASES SECTION === */
+.cases-section {
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  color: #f5f5f5;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.cases-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.cases-header h2 {
+  color: #ffb3b3;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.cases-header p {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #ccc;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Timeline Layout */
+.cases-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cases-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #b80f0a, #ff8080);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Each Case */
+.case-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 60px;
+  width: 45%;
+}
+.case-card:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.case-card:nth-child(even) {
+  left: 55%;
+}
+
+/* Connector Dots */
+.case-card::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ff5a5a;
+  box-shadow: 0 0 12px #ffb3b3;
+  left: calc(100% + 11px);
+}
+.case-card:nth-child(even)::after {
+  left: -28px;
+}
+
+/* Year Tag */
+.case-year {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff8080;
+  margin-bottom: 8px;
+}
+
+/* Case Content Box */
+.case-content {
+  background: #262626;
+  padding: 20px 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.case-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 150, 150, 0.15);
+}
+.case-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.case-content h3 {
+  color: #ffb3b3;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.case-summary {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.case-impact {
+  color: #ff9999;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* Footer */
+.cases-footer {
+  margin-top: 80px;
+  background: #2a2a2a;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+.cases-footer h3 {
+  color: #ffb3b3;
+  margin-bottom: 8px;
+}
+.cases-footer p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .cases-timeline::before {
+    left: 8px;
+  }
+  .case-card,
+  .case-card:nth-child(even),
+  .case-card:nth-child(odd) {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .case-card::after {
+    left: 0;
+  }
+}
